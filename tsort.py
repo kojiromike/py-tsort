@@ -32,7 +32,7 @@ def topological_sort(edges):
         add(s,t)
 
     # frontier
-    S=set(st.keys()).difference(ts.keys())
+    S = st.viewkeys() - ts.viewkeys()
 
     while S:
         s=S.pop()
